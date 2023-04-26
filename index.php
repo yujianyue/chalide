@@ -31,7 +31,7 @@ header("X-Accel-Buffering: no");
 session_start();
 $postData = $_SESSION['data']; //sse无法POST则读取COOKIE
 if(!stristr($postData,"messages")) exit("传递内容有误!");
-$OPENAI_API_KEY = "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";
+$OPENAI_API_KEY = $apiKey;
 $headers  = [
     'Accept: application/json',
     'Content-Type: application/json',
